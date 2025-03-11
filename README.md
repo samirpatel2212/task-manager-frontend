@@ -1,46 +1,108 @@
-# Getting Started with Create React App
+# Task Manager Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based frontend application for managing tasks. It allows users to create, view, update, and delete tasks through a user-friendly interface.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Technologies Used](#technologies-used)
+- [Folder Structure](#folder-structure)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Application Architecture and Design Choices](#application-architecture-and-design-choices)
+- [Additional Notes and Considerations](#additional-notes-and-considerations)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   **React:** For building the user interface.
+-   **TypeScript:** For static typing and improved code quality.
+-   **@tanstack/react-query:** For efficient data fetching and caching.
+-   **lodash:** For utility functions.
+-   **styled-components:** For styling components.
+-   **@testing-library/react:** For testing React components.
+-   **@testing-library/jest-dom:** for jest dom matchers.
+-   **@testing-library/user-event:** for simulating user events.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Folder Structure
 
-### `npm test`
+task-manager-frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── TaskList.tsx
+│   │   ├── TaskForm.tsx
+│   │   ├── TaskItem.tsx
+│   │   └── ... (other components)
+│   ├── hooks/
+│   │   ├── useTaskListQuery.ts
+│   │   ├── useTaskMutations.ts
+│   │   └── useTaskListUpdate.ts
+│   ├── types/
+│   │   └── taskTypes.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── api/
+│       └── taskApi.ts
+├── package.json
+├── tsconfig.json
+├── README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+-   **`public/`**: Contains the `index.html` file, which is the entry point for the application.
+-   **`src/components/`**: Houses all reusable React components.
+-   **`src/hooks/`**: Contains custom React hooks for data fetching and state management.
+-   **`src/types/`**: Defines TypeScript interfaces and types.
+-   **`src/api/`**: Contains api calls.
+-   **`src/App.tsx`**: The main application component.
+-   **`src/index.tsx`**: The entry point for rendering the React application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone <repository_url>
+    ```
 
-### `npm run eject`
+2.  Navigate to the project directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ```bash
+    cd task-manager-frontend
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    npm install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Running the Application
 
-## Learn More
+1.  Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2.  Open your browser and navigate to `http://localhost:3000`.
+
+## Application Architecture and Design Choices
+
+-   **Component-Based Architecture:** The application is built using a component-based architecture, which makes it easy to manage and reuse UI elements.
+-   **React Hooks:** React hooks are used for state management and side effects, promoting functional components and cleaner code.
+-   **@tanstack/react-query:** This library is used for data fetching, caching, and state management, simplifying API interactions and improving performance.
+-   **Styled Components:** Styled components are used for styling, providing a clean and maintainable way to style React components.
+-   **Typescript:** Typescript is used to provide type safety, and to help catch errors early.
+-   **Seperation of concerns:** The code is divided into components, hooks, types, and api calls, to promote code reusability, and to keep the code organized.
+-   **User Experience:** The design focuses on providing a user-friendly interface for managing tasks, with clear and intuitive interactions.
+
+## Additional Notes and Considerations
+
+-   **API Integration:** This frontend application assumes a backend API is available for managing tasks. Ensure the backend API is running and accessible.
+-   **Testing:** Unit tests are included to ensure the reliability of the components and hooks.
+-   **Error Handling:** Basic error handling is implemented, but more robust error handling can be added for production use.
+-   **Accessibility:** Consider adding accessibility features to improve the user experience for all users.
+-   **Responsiveness:** The application can be made responsive to work on different screen sizes.
+
