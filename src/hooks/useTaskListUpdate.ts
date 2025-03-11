@@ -35,7 +35,6 @@ export const useTaskListUpdate = ({ tasks, page, setTasksList }: UseTaskListUpda
           const newTasks = tasks.filter(
             (newTask) => !prevTasks.some((prevTask) => prevTask.id === newTask.id)
           );
-          console.log(`tasks in hook`, tasks)
           return [...prevTasks, ...newTasks];
         });
       }

@@ -107,11 +107,7 @@ const TaskList: React.FC = () => {
       type: 'success',
       message,
     })
-  }
-  useEffect(() => {
-    console.log('Tasks:', tasks);  // Log the tasks inside TaskList
-    console.log('tasksList:', tasksList);  // Log the tasks inside TaskList
-  }, [tasks]);
+  };
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading tasks: {error.message}</p>;
