@@ -26,6 +26,7 @@ This project is a React-based frontend application for managing tasks. It allows
 
 ## Folder Structure
 
+```
 task-manager-frontend/
 ├── public/
 │   └── index.html
@@ -48,7 +49,7 @@ task-manager-frontend/
 ├── package.json
 ├── tsconfig.json
 ├── README.md
-
+```
 
 -   **`public/`**: Contains the `index.html` file, which is the entry point for the application.
 -   **`src/components/`**: Houses all reusable React components.
